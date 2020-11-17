@@ -2,5 +2,5 @@
 
 RES=`./neoman.py $@`
 if (( $? == 0 )); then
-    echo "$RES" | less
+    echo "$RES" | mdv | less
 fi;

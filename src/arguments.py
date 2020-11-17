@@ -10,10 +10,11 @@ def handle_arguments():
                         help='The command you want to read man')
 
     # Optional arguments
+    """
     parser.add_argument('-s', dest='search',
                         help='Search a word or a pattern')
 
-    """
+    
     parser.add_argument('--sum', dest='accumulate', action='store_const',
                         const=sum, default=max,
                         help='sum the integers (default: find the max)')
