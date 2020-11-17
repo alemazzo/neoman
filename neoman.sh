@@ -1,6 +1,6 @@
 #!/bin/bash
 
-RES=`./neoman.py $@`
+RES=`./src/neoman.py $@`
 if (( $? == 0 )); then
-    echo "$RES" | mdv | less
+    mdv $RES | less;
 fi;
