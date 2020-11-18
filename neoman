@@ -2,5 +2,9 @@
 
 RES=`./src/neoman.py $@`
 if (( $? == 0 )); then
-    mdv $RES | less;
+    if [[ -e $RES ]]; then
+        mdv $RES | less;
+    else
+        echo -e "${RES}";
+    fi;
 fi;
